@@ -1,0 +1,28 @@
+[
+  {
+    "verbo": "POST",
+    "endpoint": "http://localhost:3001/test-message-send",
+    "headers": {
+      "Authorization": "XXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXXX",
+      "queue-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjb21wYW55IjoiQmFuY28gQk1HIiwiaWRDbGllbnQiOjk5OTksImNhdGVnb3JpYSI6IkFURU5ESU1FTlRPLU5JVkVMLTAxIn0.AlXBYdiWM2tBtuTcv5v6PaOibOSxEHHVdcABmPpDbX8"
+    },
+    "messageBody": {
+      "name": "Ronan Rodrigues",
+      "picture": "none",
+      "cpf": "11133322248",
+      "phone": "5527996011204",
+      "conversation": [
+        {
+          "isAttendant": true,
+          "message": "Desculpe, não entendi!\n\nDigite 1 para 'ADIANTAMENTO DO FGTS'",
+          "data": "2022-05-19 08:54:00"
+        },
+        {
+          "isAttendant": false,
+          "message": "falar com atendente humano",
+          "data": "2022-05-19 08:54:00"
+        }
+      ]
+    }
+  }
+]
