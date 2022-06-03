@@ -39,20 +39,15 @@ export class O2OSocket {
       let updateHistory = this.updateHistory
       //socket.join(myChannel)
 
-      socket.on(myChannel, async ({ content, to }) => {
-        const message = {
-          content,
-          from: socket.userID,
-          to,
-        }
-        console.log('recebendo mensagen: ', { content, to })
+      socket.on(myChannel, async (msg) => {
+        console.log('recebendo mensagen: ', msg)
 
         await setField('roomOpened', true, myId)
         await setField('room', myChannel, myId)
         // socketInstace.emit(myChannel, 'Obrigado por sua mensagen!')
         let myMsg = {
           question: false,
-          text: content,
+          text: msg,
           date: moment().format('YYYY-MM-DD HH:mm:ss'),
         }
         await updateHistory(myMsg, myId)
