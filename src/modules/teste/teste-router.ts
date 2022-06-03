@@ -137,7 +137,7 @@ export class TesteRouter extends BaseRouterModule {
         : 3002
       console.log(clientQueueDetails)
       let channelSocket =
-        clientQueueDetails.queue.replace(/ /g, '_') + ':' + clientData.id
+        clientQueueDetails.queue.replace(/ /g, '_') + '_' + clientData.id
       let myHistory: IResponseConversation | any
       await ResponseConversation.find({
         id: clientData.id,
