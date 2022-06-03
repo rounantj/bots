@@ -34,7 +34,7 @@ export class O2OSocket {
       console.log('a user connected in: ' + myChannel)
 
       // Save at collecion with "OPENED CHANNELS" to consult after
-      let myId = Number(myChannel.split(':')[1])
+      let myId = Number(myChannel.split('_')[1])
       let setField = this.setField
       let updateHistory = this.updateHistory
       //socket.join(myChannel)
@@ -64,7 +64,7 @@ export class O2OSocket {
   }
   public async sendResponse(room: string, txt: string, status: string) {
     // Save the sent message on the collection to update the history
-    let myId = Number(room.split(':')[1])
+    let myId = Number(room.split('_')[1])
     let updateHistory = this.updateHistory
     const service = new TesteService().updateConversation(
       'status',

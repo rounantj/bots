@@ -97,7 +97,10 @@ export class TesteRouter extends BaseRouterModule {
       console.log(clientQueueDetails)
 
       await ResponseConversation.find({
-        room: { $regex: clientQueueDetails.queue, $options: 'i' },
+        room: {
+          $regex: clientQueueDetails.queue.replace(/ /g, '_'),
+          $options: 'i',
+        },
       })
         .then((results) => {
           ResponseHandlers.onSuccess(res, results)
