@@ -18,7 +18,7 @@ export class O2OSocket {
 
   constructor(port: number) {
     this.app = express()
-    this.PORT = port
+    this.PORT = port ? port : 3002
 
     this.httpServer = createServer(this.app)
     this.io = new socketIo.Server(this.httpServer, { cors: { origin: '*' } })

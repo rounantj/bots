@@ -12,7 +12,7 @@ import { encode, decode } from 'jwt-simple'
         queue: 'ATENDIMENTO-NIVEL-01',
         id: 8888,
       },
-      process.env.JWT_SECRET
+      'SEGREDO'
     )
   )
 })()
