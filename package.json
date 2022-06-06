@@ -7,7 +7,7 @@
     "build": "tsc",
     "start": "cross-env NODE_ENV=production npm run build && node dist/index.js",
     "prod": "cross-env NODE_ENV=production npm run build && node dist/index.js",
-    "pm2": "npm run build && pm2 start dist/index.js",
+    "pm2": "npm run build && pm2 start",
     "dev": "cross-env NODE_ENV=development nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
